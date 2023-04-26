@@ -1,20 +1,15 @@
 ﻿using Caliburn.Micro;
-using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Security;
-using System.Text;
-using System.Threading.Tasks;
-using wp10_EmployeesApp.Models;
+using System.Diagnostics;
+using wp10_employeesApp.Models;
 
-namespace wp10_EmployeesApp.ViewModels
+namespace wp10_employeesApp.ViewModels
 {
-    internal class MainViewModel : Screen
+    public class MainViewModel : Screen
     {
         private Employees employee;
 
-        public BindableCollection<Employees> ListEmployees { get; set; }
+        public BindableCollection<Employees> ListEmployee { get; set; }
 
         public int Idx
         {
@@ -25,6 +20,7 @@ namespace wp10_EmployeesApp.ViewModels
                 NotifyOfPropertyChange(nameof(Idx));
             }
         }
+
         public string FullName
         {
             get => employee.FullName;
@@ -34,6 +30,7 @@ namespace wp10_EmployeesApp.ViewModels
                 NotifyOfPropertyChange(nameof(FullName));
             }
         }
+
         public int Salary
         {
             get => employee.Salary;
@@ -70,15 +67,16 @@ namespace wp10_EmployeesApp.ViewModels
             {
                 conn.Open();
 
-                string selQuery = @"SELECT [Idx]
-                                          ,[FullName]
-                                          ,[Salary]
-                                          ,[DeptName]
-                                          ,[Address]
-                                 FROM[dbo].[Employees]";
-                SqlCommand selCommand = new SqlCommand(selQuery, conn);
+                string selQeury = @"SELECT [Idx]
+                                     , [FullName]
+                                     , [Salary]
+                                     , [DeptName]
+                                     , [Address]
+                                  FROM [dbo].[Employees]";
+                SqlCommand selCommand = new SqlCommand(selQeury, conn);
                 SqlDataReader reader = selCommand.ExecuteReader();
-                ListEmployees = new BindableCollection<Employees>();
+                ListEmployee = new BindableCollection<Employees>();
+
                 while (reader.Read())
                 {
                     var emp = new Employees
@@ -89,7 +87,7 @@ namespace wp10_EmployeesApp.ViewModels
                         DeptName = reader["DeptName"].ToString(),
                         Address = reader["Address"].ToString()
                     };
-                    ListEmployees.Add(emp);
+                    ListEmployee.Add(emp);
                 }
             }
         }
