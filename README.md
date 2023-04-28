@@ -18,9 +18,9 @@ Windows Presentation Foundation
 	
 ## 3일차
 - WPF 기초
-	- 데이터바인딩 계속
+	- 데이터바인딩 마무리
+	- 디자인(템플릿, 스타일, 리소스, 리소스딕셔너리)
 	
-		
 ## 4일차
 - WPF 응용
 	- MahApps.Metro 디자인 적용
@@ -47,5 +47,40 @@ Windows Presentation Foundation
 6일차 영화검색앱 중간
 
 <img src="https://raw.githubusercontent.com/hugoMGSung/pknu-wpf-2023/main/images/wpf03.png" width="700" />
-	
-	
+
+## 7일차
+- WPF 응용
+	- 영화검색앱
+		- 화면정리
+		- CefSharp.WPF 
+		- youtube OpenAPI
+		- DB 데이터바인딩(SQL Server)
+
+## 8일차
+- WPF 응용
+	- 영화검색앱 완료
+		- DB 데이터바인딩(MySQL)
+	- 미세먼지확인 앱 개발
+		- MahApps.Metro
+		- 데이터포털 OpenAPI
+		- DB 데이터바인딩(MySQL)
+
+영화검색앱
+
+<img src="https://raw.githubusercontent.com/hugoMGSung/pknu-wpf-2023/main/images/wpf05.gif" width="700" />
+
+미세먼지확인 앱 중간
+
+<img src="https://raw.githubusercontent.com/hugoMGSung/pknu-wpf-2023/main/images/wpf06.png" width="700" />
+
+## 9일차
+- WPF 응용
+	- 미세먼지확인 앱 완료
+		- MahApps.Metro
+		- 데이터포털 OpenAPI
+		- DB 데이터바인딩(MySQL)
+	- 개인 포트폴리오 개발방식
+		- 데이터포털 OpenAPI
+		- 네이버, 카카오 OpenAPI
+		- 기타 OpenAPI
+
