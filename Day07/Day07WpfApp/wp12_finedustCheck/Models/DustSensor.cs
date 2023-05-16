@@ -28,7 +28,7 @@ namespace wp12_finedustCheck.Models
         public int Pm25_after { get; set; }
         public int State { get; set; }
         public DateTime Timestamp { get; set; }
-        public string Compnay_id { get; set; }
-        public string Compnay_name { get; set; }
+        public string Company_id { get; set; }
+        public string Company_name { get; set; }
     }
 }

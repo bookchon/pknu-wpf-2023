@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F0CBB689-1EA1-4D1E-B0E4-68D61069BEA4}</ProjectGuid>
+    <ProjectGuid>{A1CF372B-9802-4EF9-823D-180B4B42002A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>wp09_caliburnApp</RootNamespace>
     <AssemblyName>wp09_caliburnApp</AssemblyName>
@@ -184,7 +184,7 @@
     </ApplicationDefinition>
     <Compile Include="Models\Person.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
-    <Page Include="Views\MainWindow.xaml">
+    <Page Include="Views\MainView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -193,8 +193,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Views\MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

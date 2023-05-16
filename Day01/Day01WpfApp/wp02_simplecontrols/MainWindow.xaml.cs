@@ -32,10 +32,10 @@ namespace wp02_simplecontrols
             PgbStep.Value = (int)SldStep.Value;
         }
 
-        private void Window_Loaded(object sender,RoutedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             var path = Directory.GetCurrentDirectory();
-            MediaPlayer.Source = new Uri(path + @"/Resources/earth.avi", UriKind.RelativeOrAbsolute);
+            MediaPlayer.Source = new Uri(path + @"\Resources\earth.avi", UriKind.RelativeOrAbsolute);
             MediaPlayer.Play();
         }
     }
